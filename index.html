@@ -10,44 +10,51 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+ <!-- CSS only -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
 
 <nav class="navbar bg-light">
 <div class="container-fluid">
-  <a class="navbar-brand" href="#">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wikibooks_library_icon_humanities.svg/2048px-Wikibooks_library_icon_humanities.svg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-    Library
-  </a>
+ <a class="navbar-brand" href="#">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wikibooks_library_icon_humanities.svg/2048px-Wikibooks_library_icon_humanities.svg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+   Library
+ </a>
 </div>
 </nav>
 
 
 <div class="container">
 <form id="inputGroup">
-  <div id="formHeader">New Book </div>
-    <label for="name" class="form-label" >Book Name</label>
-    <input id="name" type="text" class="form-control" required> </input>
-    <label for="author" class="form-label">Author</label>
-    <input id="author" type="text" class="form-control"> </input>
-    <label for="page" class="form-label">Page</label>
-    <input id="page" type="number" class="form-control"> </input>
-    <div class="form-check mt-3">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">I have read the book
-      </label> 
-    </form>
+ <div id="formHeader">New Book </div>
+   <label for="title" class="form-label" >Title</label>
+   <input id="title" type="text" class="form-control" required> </input>
+   <label for="author" class="form-label">Author</label>
+   <input id="author" type="text" class="form-control"> </input>
+   <label for="page" class="form-label">Page</label>
+   <input id="page" type="number" class="form-control"> </input>
+   <div class="form-check mt-3">
+     <input class="form-check-input" type="checkbox" id="gridCheck" value="read">
+     <label id="read" class="form-check-label" for="gridCheck">I have read the book
+     </label> 
+   </form>
 
 
-     <button onclick="addintoLibrary()" class="btn btn-outline-primary btn-sm mt-3">Add</button>
-  </div>
+    <button onclick="addintoLibrary()" class="btn btn-outline-primary btn-sm mt-3">Add</button>
+ </div>
 <div>
-  <div id="libraryHeader">Library </div>
-  <div id="library">
+ <div id="libraryHeader">Library </div>
+ <div id="library">
 </div>
 
 </div>
+
+
+
+
+
+
+
 </body>
 </html>
