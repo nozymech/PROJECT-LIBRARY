@@ -1,4 +1,4 @@
-let library = [{title:"The Happiness Project", author:"Gretchen Rubin",page:"368",read:"read"}];
+let library = [];
 
 let list =
 document.getElementById("library")
@@ -44,14 +44,4 @@ const deleteBook = (i) => {
   library.splice(i,1);
   list.innerHTML= randerList();
 }
-
-class Books{
-  constructor(title,author,pages,read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-  }
-  }
-  
 
