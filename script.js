@@ -6,7 +6,6 @@ let title = document.getElementById("title")
 let author = document.getElementById("author")
 let page = document.getElementById("page")
 let gridCheck = document.getElementById("gridCheck")
-console.log(gridCheck.checked);
 //抓到html元素
 
 const randerList=() => {
@@ -20,6 +19,7 @@ for (let i=0; i<library.length;i++) {result = result +`<div class="card" style="
       <div>status: ${library[i].read}</div>
     </p>
     <a href="#" class="btn btn-danger"  onclick="deleteBook(${i})">Delete</a>
+    <button type="button" class="btn btn-info" onclick="toggle(${i})">Toggle</button>
   </div>
 </div>`;}
   return result;
@@ -42,6 +42,15 @@ const addintoLibrary = () => {
 
 const deleteBook = (i) => {
   library.splice(i,1);
+  list.innerHTML= randerList();
+}
+
+const toggle = (i) => {
+  if (library[i].read == "Not Read" ) {
+     library[i].read = "Read";
+  }else if (library[i].read == "Read" ) {
+    library[i].read = "Not Read";
+  }
   list.innerHTML= randerList();
 }
 
